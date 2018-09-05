@@ -55,3 +55,18 @@ render();
 
 //订阅
 store.subscribe(render);
+
+
+//取消订阅
+let unsubscribe = store.subscribe(render);
+
+// console.log(unsubscribe);
+
+setTimeout(function (){
+
+    alert('zhixg')
+    unsubscribe();
+},2000);
+
+
+
