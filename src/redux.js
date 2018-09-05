@@ -34,6 +34,7 @@ const createStore = (reducer)=>{
         //返回一个 取消订阅的函数
         return () => {
 
+            console.log(listener);
             listeners.filter(l => listener !== l);
         }
     }
