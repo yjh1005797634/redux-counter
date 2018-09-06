@@ -16,6 +16,8 @@ const createStore = (reducer)=>{
     //发射任务
     let dispatch = (action)=> {
 
+
+        console.log(action);
         state = reducer(state,action);
 
         listeners.forEach(listener => listener());

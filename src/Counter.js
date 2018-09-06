@@ -3,7 +3,8 @@
  */
 import React,{Component} from 'react';
 // import ReactDOM from 'react-dom';
-import {createStore} from './redux'
+// import {createStore} from './redux'
+import {createStore} from '../node_modules/redux';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -18,7 +19,6 @@ export default class Counter extends Component {
 
         this.state = {num:store.getState().num}
     }
-
 
     /* 将要挂载的时候 改变数据状态*/
     componentWillMount(){
@@ -36,10 +36,6 @@ export default class Counter extends Component {
 
        this.unsubscribe();
 
-        // setTimeout(()=> {
-        //     alert('执行')
-        //     this.unsubscribe()
-        // },2000);
     }
 
 
@@ -57,7 +53,6 @@ export default class Counter extends Component {
         )
     }
 }
-
 
 
 let reducer = (state={num:2},action)=>{
